@@ -1,3 +1,3 @@
 <h3>Planets App</h3>
 <br>
-This iOS displays planets and their current information.
+This iOS app displays planets and their current information.
