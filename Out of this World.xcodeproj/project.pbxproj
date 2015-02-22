@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC07409719A18ACD00CFCD72 /* SVAddSpaceObjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07409619A18ACD00CFCD72 /* SVAddSpaceObjectViewController.m */; };
+		FC114DAF19A04F1E00822EED /* SVSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC114DAE19A04F1E00822EED /* SVSpaceDataViewController.m */; };
 		FCCD1F9B1999B49E00A0A460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCD1F9A1999B49E00A0A460 /* Foundation.framework */; };
 		FCCD1F9D1999B49E00A0A460 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCD1F9C1999B49E00A0A460 /* CoreGraphics.framework */; };
 		FCCD1F9F1999B49E00A0A460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCD1F9E1999B49E00A0A460 /* UIKit.framework */; };
@@ -14,13 +16,26 @@
 		FCCD1FA71999B49E00A0A460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FA61999B49E00A0A460 /* main.m */; };
 		FCCD1FAB1999B49E00A0A460 /* SVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FAA1999B49E00A0A460 /* SVAppDelegate.m */; };
 		FCCD1FAE1999B49E00A0A460 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FAC1999B49E00A0A460 /* Main.storyboard */; };
-		FCCD1FB11999B49E00A0A460 /* SVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FB01999B49E00A0A460 /* SVViewController.m */; };
 		FCCD1FB31999B49E00A0A460 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FB21999B49E00A0A460 /* Images.xcassets */; };
 		FCCD1FBA1999B49E00A0A460 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCD1FB91999B49E00A0A460 /* XCTest.framework */; };
 		FCCD1FBB1999B49E00A0A460 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCD1F9A1999B49E00A0A460 /* Foundation.framework */; };
 		FCCD1FBC1999B49E00A0A460 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCD1F9E1999B49E00A0A460 /* UIKit.framework */; };
 		FCCD1FC41999B49E00A0A460 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FC21999B49E00A0A460 /* InfoPlist.strings */; };
 		FCCD1FC61999B49E00A0A460 /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FC51999B49E00A0A460 /* Out_of_this_WorldTests.m */; };
+		FCCD1FD11999B54700A0A460 /* SVOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FD01999B54700A0A460 /* SVOuterSpaceTableViewController.m */; };
+		FCCD1FD41999BCAF00A0A460 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FD31999BCAF00A0A460 /* AstronomicalData.m */; };
+		FCCD1FD7199A4CF500A0A460 /* SVSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD1FD6199A4CF500A0A460 /* SVSpaceObject.m */; };
+		FCCD1FE2199A4DF300A0A460 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FD8199A4DF300A0A460 /* Earth.jpg */; };
+		FCCD1FE3199A4DF300A0A460 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FD9199A4DF300A0A460 /* EinsteinRing.jpg */; };
+		FCCD1FE4199A4DF300A0A460 /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FDA199A4DF300A0A460 /* Jupiter.jpg */; };
+		FCCD1FE5199A4DF300A0A460 /* Mars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FDB199A4DF300A0A460 /* Mars.jpg */; };
+		FCCD1FE6199A4DF300A0A460 /* Mercury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FDC199A4DF300A0A460 /* Mercury.jpg */; };
+		FCCD1FE7199A4DF300A0A460 /* Neptune.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FDD199A4DF300A0A460 /* Neptune.jpg */; };
+		FCCD1FE8199A4DF300A0A460 /* Orion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FDE199A4DF300A0A460 /* Orion.jpg */; };
+		FCCD1FE9199A4DF300A0A460 /* Saturn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FDF199A4DF300A0A460 /* Saturn.jpg */; };
+		FCCD1FEA199A4DF300A0A460 /* Uranus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FE0199A4DF300A0A460 /* Uranus.jpg */; };
+		FCCD1FEB199A4DF300A0A460 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCCD1FE1199A4DF300A0A460 /* Venus.jpg */; };
+		FCCD2040199AC86C00A0A460 /* SVSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCCD203F199AC86C00A0A460 /* SVSpaceImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC07409519A18ACD00CFCD72 /* SVAddSpaceObjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVAddSpaceObjectViewController.h; sourceTree = "<group>"; };
+		FC07409619A18ACD00CFCD72 /* SVAddSpaceObjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVAddSpaceObjectViewController.m; sourceTree = "<group>"; };
+		FC114DAD19A04F1E00822EED /* SVSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSpaceDataViewController.h; sourceTree = "<group>"; };
+		FC114DAE19A04F1E00822EED /* SVSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSpaceDataViewController.m; sourceTree = "<group>"; };
 		FCCD1F971999B49E00A0A460 /* Out of this World.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Out of this World.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCD1F9A1999B49E00A0A460 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FCCD1F9C1999B49E00A0A460 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +64,30 @@
 		FCCD1FA91999B49E00A0A460 /* SVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVAppDelegate.h; sourceTree = "<group>"; };
 		FCCD1FAA1999B49E00A0A460 /* SVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVAppDelegate.m; sourceTree = "<group>"; };
 		FCCD1FAD1999B49E00A0A460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FCCD1FAF1999B49E00A0A460 /* SVViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVViewController.h; sourceTree = "<group>"; };
-		FCCD1FB01999B49E00A0A460 /* SVViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVViewController.m; sourceTree = "<group>"; };
 		FCCD1FB21999B49E00A0A460 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCCD1FB81999B49E00A0A460 /* Out of this WorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Out of this WorldTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCCD1FB91999B49E00A0A460 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FCCD1FC11999B49E00A0A460 /* Out of this WorldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Out of this WorldTests-Info.plist"; sourceTree = "<group>"; };
 		FCCD1FC31999B49E00A0A460 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FCCD1FC51999B49E00A0A460 /* Out_of_this_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_WorldTests.m; sourceTree = "<group>"; };
+		FCCD1FCF1999B54700A0A460 /* SVOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVOuterSpaceTableViewController.h; sourceTree = "<group>"; };
+		FCCD1FD01999B54700A0A460 /* SVOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVOuterSpaceTableViewController.m; sourceTree = "<group>"; };
+		FCCD1FD21999BCAF00A0A460 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
+		FCCD1FD31999BCAF00A0A460 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		FCCD1FD5199A4CF500A0A460 /* SVSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSpaceObject.h; sourceTree = "<group>"; };
+		FCCD1FD6199A4CF500A0A460 /* SVSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSpaceObject.m; sourceTree = "<group>"; };
+		FCCD1FD8199A4DF300A0A460 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
+		FCCD1FD9199A4DF300A0A460 /* EinsteinRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EinsteinRing.jpg; sourceTree = "<group>"; };
+		FCCD1FDA199A4DF300A0A460 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
+		FCCD1FDB199A4DF300A0A460 /* Mars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mars.jpg; sourceTree = "<group>"; };
+		FCCD1FDC199A4DF300A0A460 /* Mercury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Mercury.jpg; sourceTree = "<group>"; };
+		FCCD1FDD199A4DF300A0A460 /* Neptune.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Neptune.jpg; sourceTree = "<group>"; };
+		FCCD1FDE199A4DF300A0A460 /* Orion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Orion.jpg; sourceTree = "<group>"; };
+		FCCD1FDF199A4DF300A0A460 /* Saturn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Saturn.jpg; sourceTree = "<group>"; };
+		FCCD1FE0199A4DF300A0A460 /* Uranus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Uranus.jpg; sourceTree = "<group>"; };
+		FCCD1FE1199A4DF300A0A460 /* Venus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Venus.jpg; sourceTree = "<group>"; };
+		FCCD203E199AC86C00A0A460 /* SVSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVSpaceImageViewController.h; sourceTree = "<group>"; };
+		FCCD203F199AC86C00A0A460 /* SVSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVSpaceImageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +150,16 @@
 				FCCD1FA91999B49E00A0A460 /* SVAppDelegate.h */,
 				FCCD1FAA1999B49E00A0A460 /* SVAppDelegate.m */,
 				FCCD1FAC1999B49E00A0A460 /* Main.storyboard */,
-				FCCD1FAF1999B49E00A0A460 /* SVViewController.h */,
-				FCCD1FB01999B49E00A0A460 /* SVViewController.m */,
+				FCCD1FCF1999B54700A0A460 /* SVOuterSpaceTableViewController.h */,
+				FCCD1FD01999B54700A0A460 /* SVOuterSpaceTableViewController.m */,
+				FCCD203E199AC86C00A0A460 /* SVSpaceImageViewController.h */,
+				FCCD203F199AC86C00A0A460 /* SVSpaceImageViewController.m */,
+				FC114DAD19A04F1E00822EED /* SVSpaceDataViewController.h */,
+				FC114DAE19A04F1E00822EED /* SVSpaceDataViewController.m */,
+				FC07409519A18ACD00CFCD72 /* SVAddSpaceObjectViewController.h */,
+				FC07409619A18ACD00CFCD72 /* SVAddSpaceObjectViewController.m */,
+				FCCD1FD5199A4CF500A0A460 /* SVSpaceObject.h */,
+				FCCD1FD6199A4CF500A0A460 /* SVSpaceObject.m */,
 				FCCD1FB21999B49E00A0A460 /* Images.xcassets */,
 				FCCD1FA11999B49E00A0A460 /* Supporting Files */,
 			);
@@ -126,6 +169,18 @@
 		FCCD1FA11999B49E00A0A460 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FCCD1FD8199A4DF300A0A460 /* Earth.jpg */,
+				FCCD1FD9199A4DF300A0A460 /* EinsteinRing.jpg */,
+				FCCD1FDA199A4DF300A0A460 /* Jupiter.jpg */,
+				FCCD1FDB199A4DF300A0A460 /* Mars.jpg */,
+				FCCD1FDC199A4DF300A0A460 /* Mercury.jpg */,
+				FCCD1FDD199A4DF300A0A460 /* Neptune.jpg */,
+				FCCD1FDE199A4DF300A0A460 /* Orion.jpg */,
+				FCCD1FDF199A4DF300A0A460 /* Saturn.jpg */,
+				FCCD1FE0199A4DF300A0A460 /* Uranus.jpg */,
+				FCCD1FE1199A4DF300A0A460 /* Venus.jpg */,
+				FCCD1FD21999BCAF00A0A460 /* AstronomicalData.h */,
+				FCCD1FD31999BCAF00A0A460 /* AstronomicalData.m */,
 				FCCD1FA21999B49E00A0A460 /* Out of this World-Info.plist */,
 				FCCD1FA31999B49E00A0A460 /* InfoPlist.strings */,
 				FCCD1FA61999B49E00A0A460 /* main.m */,
@@ -229,9 +284,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCCD1FE2199A4DF300A0A460 /* Earth.jpg in Resources */,
+				FCCD1FEB199A4DF300A0A460 /* Venus.jpg in Resources */,
+				FCCD1FE6199A4DF300A0A460 /* Mercury.jpg in Resources */,
+				FCCD1FE9199A4DF300A0A460 /* Saturn.jpg in Resources */,
+				FCCD1FEA199A4DF300A0A460 /* Uranus.jpg in Resources */,
 				FCCD1FB31999B49E00A0A460 /* Images.xcassets in Resources */,
+				FCCD1FE7199A4DF300A0A460 /* Neptune.jpg in Resources */,
+				FCCD1FE5199A4DF300A0A460 /* Mars.jpg in Resources */,
 				FCCD1FA51999B49E00A0A460 /* InfoPlist.strings in Resources */,
 				FCCD1FAE1999B49E00A0A460 /* Main.storyboard in Resources */,
+				FCCD1FE3199A4DF300A0A460 /* EinsteinRing.jpg in Resources */,
+				FCCD1FE4199A4DF300A0A460 /* Jupiter.jpg in Resources */,
+				FCCD1FE8199A4DF300A0A460 /* Orion.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +315,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCCD1FB11999B49E00A0A460 /* SVViewController.m in Sources */,
 				FCCD1FA71999B49E00A0A460 /* main.m in Sources */,
+				FCCD1FD11999B54700A0A460 /* SVOuterSpaceTableViewController.m in Sources */,
+				FC114DAF19A04F1E00822EED /* SVSpaceDataViewController.m in Sources */,
+				FCCD2040199AC86C00A0A460 /* SVSpaceImageViewController.m in Sources */,
 				FCCD1FAB1999B49E00A0A460 /* SVAppDelegate.m in Sources */,
+				FCCD1FD7199A4CF500A0A460 /* SVSpaceObject.m in Sources */,
+				FC07409719A18ACD00CFCD72 /* SVAddSpaceObjectViewController.m in Sources */,
+				FCCD1FD41999BCAF00A0A460 /* AstronomicalData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +527,7 @@
 				FCCD1FCB1999B49E00A0A460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCCD1FCC1999B49E00A0A460 /* Build configuration list for PBXNativeTarget "Out of this WorldTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +536,7 @@
 				FCCD1FCE1999B49E00A0A460 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

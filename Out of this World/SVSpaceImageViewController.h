@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SVSpaceObject.h"
 
-@interface SVSpaceImageViewController : UIViewController
+@interface SVSpaceImageViewController : UIViewController <UIScrollViewDelegate>
+
+
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) UIImageView *imageView;
+@property (strong, nonatomic) SVSpaceObject *spaceObject;
 
 @end

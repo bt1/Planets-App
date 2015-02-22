@@ -7,12 +7,33 @@
 //
 
 #import "SVOuterSpaceTableViewController.h"
+#import "AstronomicalData.h"
+#import "SVSpaceObject.h"
+#import "SVSpaceImageViewController.h"
+#import "SVSpaceDataViewController.h"
 
 @interface SVOuterSpaceTableViewController ()
 
 @end
 
 @implementation SVOuterSpaceTableViewController
+
+# pragma mark - Lazy Instantiation of Properties
+- (NSMutableArray *)planets
+{
+    if (!_planets) {
+        _planets = [[NSMutableArray alloc]init];
+    }
+    return _planets;
+}
+
+- (NSMutableArray *)addedSpaceObjects
+{
+    if (!_addedSpaceObjects) {
+        _addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    return _addedSpaceObjects;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,6 +53,63 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.tableView.backgroundColor = [UIColor blackColor];
+    
+    for (NSMutableDictionary *planetData in [AstronomicalData allKnownPlanets])
+    {
+        NSString *imageName = [NSString stringWithFormat:@"%@.jpg",planetData[PLANET_NAME]];
+        SVSpaceObject *planet = [[SVSpaceObject alloc]initWithData:planetData andImage:[UIImage imageNamed:imageName]];
+        [self.planets addObject:planet];
+    }
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"%@",sender);
+    
+    if ([sender isKindOfClass:[UITableViewCell class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[SVSpaceImageViewController class]])
+        {
+            SVSpaceImageViewController *nextViewController = segue.destinationViewController;
+            NSIndexPath *path = [self.tableView indexPathForCell:sender];
+            SVSpaceObject *selectedObject;
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1){
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
+            nextViewController.spaceObject = selectedObject;
+            
+        }
+    }
+    
+    if ([sender isKindOfClass:[NSIndexPath class]])
+    {
+        if ([segue.destinationViewController isKindOfClass:[SVSpaceDataViewController class]])
+        {
+            SVSpaceDataViewController *targetViewController = segue.destinationViewController;
+            NSIndexPath *path = sender;
+            SVSpaceObject *selectedObject;
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1){
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
+            targetViewController.spaceObject = selectedObject;
+        }
+    }
+    
+    if([segue.destinationViewController isKindOfClass:[SVAddSpaceObjectViewController class]]){
+        SVAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,32 +118,90 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - SVAddSpaceObjectViewControllerDelegate
+
+- (void)didCancel
+{
+    NSLog(@"Did Cancel");
+    [self dismissViewControllerAnimated:YES completion:nil];
+
+}
+
+- (void)addSpaceObject:(SVSpaceObject *)spaceObject
+{
+    [self.addedSpaceObjects addObject:spaceObject];
+    
+    NSLog(@"Added Space Object");
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.tableView reloadData];
+    
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    if ([self.addedSpaceObjects count] )
+    {
+        return 2;
+    }
+    else
+    {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    if (section == 1) {
+        return [self.addedSpaceObjects count];
+    }
+    else
+    {
+        return [self.planets count];
+    }
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
+    if (indexPath.section == 1) {
+        //Use new space object to customize our cell
+        SVSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.spaceImage;
+    }
+    else
+    {
+        SVSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.spaceImage;
+    }
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+    
     
     return cell;
 }
-*/
+
+#pragma mark UITableView Delegate
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"push to space data" sender:indexPath];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
